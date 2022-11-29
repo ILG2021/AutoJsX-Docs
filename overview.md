@@ -12,21 +12,12 @@ AutoX.js 使用 JavaScript 作为脚本语言，目前使用 [Rhino 1.7.13](http
 - 如果想要在电脑上开发 AutoX.js，可以使用 VSCode 以及 [AutoX.js 插件](https://marketplace.visualstudio.com/items?itemName=aaroncheng.auto-js-vsce-fixed)。
 - 如果想要使用 TypeScript 来开发，目前有开发者公布了一个 [相关工具](https://github.com/pboymt/autojs-dev)。
 
-
-
-# AutoX.js 下载地址
-
-在 [Github Releases](https://github.com/kkevsekk1/AutoX/releases) 下载
-
 # AutoX.js 的功能
 
-- [x] AutoX.js 项目工程化：结合 webpack vscode 插件，开发、编译、打包、部署、混淆、加密一体化 [文档资料](https://github.com/kkevsekk1/webpack-autojs)
+- [x] AutoX.js 项目脚手架：结合 webpack vscode 插件，开发、编译、打包、部署、混淆、加密一体化 [文档资料](https://github.com/kkevsekk1/webpack-autojs)。(注意`--registry=https://registry.npm.taobao.org`是国内网址，国外开发不需要)
 - [x] vscode 插件右键，自动提示操作等 [下载地址](https://marketplace.visualstudio.com/items?itemName=aaroncheng.auto-js-vsce-fixed)
 - [x] vscode 自动补全、方法注释等 [文档资料](https://github.com/kkevsekk1/webpack-autojs)
 - [x] 修复众多 bug，升级到 5.0.1 ,合并打包插件，升级配置文件等功能
-- [x] 建设论坛、提供 [交流社区](http://www.autoxjs.com/)
-- [ ] 建设应用商店
-- [ ] 提供更好的 SDK 封装
 - [x] 支持 WebSocket 
 
 # 模块
@@ -61,9 +52,9 @@ AutoX.js 使用 JavaScript 作为脚本语言，目前使用 [Rhino 1.7.13](http
 
 # 参与共建
 
-[软件源码](https://github.com/kkevsekk1/AutoX)
+[软件源码](https://github.com/ILG2021/AutoX)
 
-[文档源码](https://github.com/kkevsekk1/AutoXJs-Docs)
+[文档源码](https://github.com/ILG2021/AutoJs-Docs)
 
 本文档更新稍有滞后，某些模块文档并没写完，希望有开发者共同参与维护！
 
