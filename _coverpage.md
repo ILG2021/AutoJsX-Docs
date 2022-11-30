@@ -6,4 +6,4 @@
 
 [:construction_worker: 脚手架](https://github.com/kkevsekk1/webpack-autojs)
 [:octocat: GitHub](https://github.com/ILG2021/AutoX)
-[:book: 开始](#综述)
+[:book: 开始](#入门)
