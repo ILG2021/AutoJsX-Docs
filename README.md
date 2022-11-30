@@ -1,6 +1,6 @@
 # AutoX.js 文档
 
-地址 : http://doc.autoxjs.com/
+地址 : https://ilg2021.github.io/AutoJsX-Docs
 
 
 使用 [Docsify](https://github.com/docsifyjs/docsify/) 构建
