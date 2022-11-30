@@ -1,3 +1,13 @@
+
+# 入门
+AutoJs的工作原理是在一个Android App AutoJsX上内置了js引擎，js引擎实现了手机自动化的一套js api。在vs code上写js代码，然后通过局域网推送js代码到AutoJsX，这样就可以跑脚本了。降低了开发的门槛，因为js开发相对简单。下面介绍下环境搭建：
+- 在开发手机/虚拟机上装[AutoJsX](https://github.com/ILG2021/AutoJsX/releases/tag/6.3.5) app
+- 安装vs code[开发插件](https://marketplace.visualstudio.com/items?itemName=aaroncheng.auto-js-vsce-fixed)
+- 下载[脚手架代码](https://github.com/kkevsekk1/webpack-autojs)，这步可以不需要，根据个人习惯。
+- ctrl + shift + p 选择autojs启动服务，然后ipconfig查询电脑局域网ip，接着在手机上打开AutoJsX app，点击侧边栏最底下的“连接电脑”。这个时候vs code就会显示连接状态
+- vs code写js代码，点击右上角运行按钮，或者按F5，js代码会推送到手机app并运行
+- 开发完成之后，使用AutoJsX打包生成最终的产品app。点击js文件右边的三个点——更多——打包应用。多个文件的项目需要建立项目，[参考](/qa?id=如何把图片和脚本一起打包，或者打包多个脚本)
+
 # 综述 <!-- {docsify-ignore-all} -->
 
 由于原作者不再维护 [Auto.js](https://github.com/hyb1996/Auto.js)，我计划在原来4.1版本的基础上继续维护项目，并将原项目命名为 [AutoX.js](https://github.com/kkevsekk1/AutoX)。
@@ -52,9 +62,9 @@ AutoX.js 使用 JavaScript 作为脚本语言，目前使用 [Rhino 1.7.13](http
 
 # 参与共建
 
-[软件源码](https://github.com/ILG2021/AutoX)
+[软件源码](https://github.com/ILG2021/AutoJsX)
 
-[文档源码](https://github.com/ILG2021/AutoJs-Docs)
+[文档源码](https://github.com/ILG2021/AutoJsX-Docs)
 
 本文档更新稍有滞后，某些模块文档并没写完，希望有开发者共同参与维护！
 
