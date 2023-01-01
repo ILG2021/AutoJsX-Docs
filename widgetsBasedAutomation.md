@@ -589,7 +589,7 @@ className("android.support.v7.widget.RecyclerView").scrollable().findOne().scrol
 //启动Auto.js
 launchApp("Auto.js");
 //在6秒内找出日志图标的控件
-var w = id("action_log").findOne(6000);
+var w = id("action_log").untilFindOne(6000);
 //如果找到控件则点击
 if(w != null){
     w.click();
