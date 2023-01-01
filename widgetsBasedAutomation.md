@@ -564,7 +564,7 @@ className("android.support.v7.widget.RecyclerView").scrollable().findOne().scrol
 
 为当前选择器附加控件是否文本或输入框控件是否是多行显示的条件。
 
-## UiSelector.findOne()
+## UiSelector.untilFindOne()
 
 - 返回 [UiObject](#uiobject)
 
@@ -572,18 +572,16 @@ className("android.support.v7.widget.RecyclerView").scrollable().findOne().scrol
 
 需要注意的是，如果屏幕上一直没有出现所描述的控件，则该函数会阻塞，直至所描述的控件出现为止。因此此函数不会返回`null`。
 
-该函数本来应该命名为`untilFindOne()`，但由于历史遗留原因已经无法修改。如果想要只在屏幕上搜索一次而不是一直搜索，请使用`findOnce()`。
+另外，如果屏幕上有多个满足条件的控件，`untilFindOne()`采用深度优先搜索(DFS)，会返回该搜索算法找到的第一个控件。注意控件找到的顺序有时会起到作用。
 
-另外，如果屏幕上有多个满足条件的控件，`findOne()`采用深度优先搜索(DFS)，会返回该搜索算法找到的第一个控件。注意控件找到的顺序有时会起到作用。
-
-## UiSelector.findOne(timeout)
+## UiSelector.untilFindOne(timeout)
 
 - `timeout` {number} 搜索的超时时间，单位毫秒
 - 返回 [UiObject](#uiobject)
 
 根据当前的选择器所确定的筛选条件，对屏幕上的控件进行搜索，直到屏幕上出现满足条件的一个控件为止，并返回该控件；如果在 timeout 毫秒的时间内没有找到符合条件的控件，则终止搜索并返回`null`。
 
-该函数类似于不加参数的`findOne()`，只不过加上了时间限制。
+该函数类似于不加参数的`untilFindOne()`，只不过加上了时间限制。
 
 示例：
 
@@ -601,13 +599,13 @@ if(w != null){
 }
 ```
 
-## UiSelector.findOnce()
+## UiSelector.findOne()
 
 - 返回 [UiObject](#uiobject)
 
 根据当前的选择器所确定的筛选条件，对屏幕上的控件进行搜索，如果找到符合条件的控件则返回该控件；否则返回`null`。
 
-## UiSelector.findOnce(i)
+## UiSelector.findOne(i)
 
 - `i` {number} 索引
 
@@ -621,7 +619,7 @@ if(w != null){
 
 根据当前的选择器所确定的筛选条件，对屏幕上的控件进行搜索，找到所有满足条件的控件集合并返回。这个搜索只进行一次，并不保证一定会找到，因而会出现返回的控件集合为空的情况。
 
-不同于`findOne()`或者`findOnce()`只找到一个控件并返回一个控件，`find()`函数会找出所有满足条件的控件并返回一个控件集合。之后可以对控件集合进行操作。
+不同于`findOne()`或者`findOne()`只找到一个控件并返回一个控件，`find()`函数会找出所有满足条件的控件并返回一个控件集合。之后可以对控件集合进行操作。
 
 可以通过 empty()函数判断找到的是否为空。例如：
 
@@ -682,7 +680,7 @@ var uc = className("TextView").filter(function(w){
 
 UiObject 表示一个控件，可以通过这个对象获取到控件的属性，也可以对控件进行点击、长按等操作。
 
-获取一个 UiObject 通常通过选择器的`findOne()`, `findOnce()`等函数，也可以通过 UiCollection 来获取，或者通过`UiObject.child()`, `UiObject.parent()`等函数来获取一个控件的子控件或父控件。
+获取一个 UiObject 通常通过选择器的`findOne()`, `findOne()`等函数，也可以通过 UiCollection 来获取，或者通过`UiObject.child()`, `UiObject.parent()`等函数来获取一个控件的子控件或父控件。
 
 ## UiObject.click()
 
